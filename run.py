@@ -10,6 +10,12 @@ import readline
 import rlcompleter
 import time
 
+'''
+启动服务，需要手动启动的服务器都可以
+这个是启动需要启动两个父进程服务的
+需要启动单个父进程的需要做些小改动
+'''
+
 readline.parse_and_bind('tab:complete')
 histfile = os.path.join(os.environ['HOME'], '.pythonhistory')
 
