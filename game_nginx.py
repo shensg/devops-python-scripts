@@ -3,6 +3,10 @@
 
 import json
 
+'''
+针对多nginx配置，一次性添加或者修改
+'''
+
 ## 游戏对应字典内容
 ModeNameDict = {
 	"Paigow":'8901',
