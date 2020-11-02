@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 # !-*- coding:utf8 -*-
 # 注：把脚本放在游戏项目根目录下运行 ,运行此脚本时，请确保run.py 存在且放在游戏根目录
 # author:Liujinxin
