@@ -9,6 +9,9 @@ import time
 # import readline
 import requests
 
+'''
+更新服务，必须是docker启动服务并且有自己的resigtry的私有仓库
+'''
 
 # Gets the current script directory as the working directory // 获取当前脚本目录作为工作目录
 dir = sys.path[0]
