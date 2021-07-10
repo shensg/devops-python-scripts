@@ -29,11 +29,11 @@ class MysqlConnect(object):
     """
     def __init__(self):
         self.db_conf = {
-            'host': '101.34.46.226',
+            'host': 'localhost',
             'port': 3306,
-            'user': 'zabbixuser',
-            'password': 'ASDinter$%123',
-            'database': 'zabbix',
+            'user': 'root',
+            'password': 'pwd',
+            'database': 'dbname',
             'charset': 'utf8'
         }
 
