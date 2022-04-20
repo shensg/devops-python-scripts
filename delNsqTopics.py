@@ -25,7 +25,7 @@ def getNsqVersion(addr):
 def delUnusedTopicAndChannel(addr):
     version = getNsqVersion(addr)
     r = re.split('[.]', version)
-    r = int(r[1])
+    v = int(r[1])
     f = requests.get(addr + "/api/topics", auth=HTTPBasicAuth(username, password))
     f = f.json()
     # print("All topic")
@@ -41,7 +41,7 @@ def delUnusedTopicAndChannel(addr):
         if len(l.get("channels", None)):
             # Delete unused channel
             res = l.get("channels", None)
-            if r == 1:
+            if v == 1:
                 print("NSQ greater than or equal to 1.1.0, Is the current version：", version)
                 for i in res:
                     if not i.get("clients"):
@@ -49,7 +49,7 @@ def delUnusedTopicAndChannel(addr):
                         r1 = requests.delete(addr + "/api/topics/" + i.get("topic_name", None) + "/" + i.get("channel_name", None), auth=HTTPBasicAuth(username, password))
                         print(r1)
                         time.sleep(0.1)
-            elif r == 2:
+            elif v == 2:
                 print("NSQ version greater than or equal to, Is the current version：", version)
                 for i in res:
                     if i.get("client_count") == 0:
@@ -66,9 +66,9 @@ def delUnusedTopicAndChannel(addr):
 
 if __name__ == "__main__":
     # NSQ username password authentication
-    username = ""
-    password = ""
+    username = "ydjadmin"
+    password = "yidejia!@#"
     # The corresponding NSQ address needs to be replaced. Please do not add it after the address "/"
-    addr = "https://<doamin>"
+    addr = "https://cim-test-nsq.yidejia.com"
     delUnusedTopicAndChannel(addr)
     delUnusedTopicAndChannel(addr)
