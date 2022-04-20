@@ -66,9 +66,9 @@ def delUnusedTopicAndChannel(addr):
 
 if __name__ == "__main__":
     # NSQ username password authentication
-    username = "ydjadmin"
-    password = "yidejia!@#"
+    username = ""
+    password = ""
     # The corresponding NSQ address needs to be replaced. Please do not add it after the address "/"
-    addr = "https://cim-test-nsq.yidejia.com"
+    addr = "https://doamin"
     delUnusedTopicAndChannel(addr)
     delUnusedTopicAndChannel(addr)
