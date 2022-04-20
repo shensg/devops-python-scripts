@@ -50,7 +50,7 @@ def delUnusedTopicAndChannel(addr):
             time.sleep(0.1)
 
 if __name__ == "__main__":
-    username = "ydjadmin"
+    username = ""
     password = ""
     addr = "https://<doamin.com>/api/topics"
     delUnusedTopicAndChannel(addr)
